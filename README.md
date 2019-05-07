@@ -8,4 +8,6 @@ The main purpose of this project is to read a JSON and create cards with an opti
 Technologies Used :
 HTML, CSS3, SASS, Bootstrap 4.0, AngularJs
 
+Note: Uploaded a seperate JS file to understand the approach better to read JSON file.
+
 Gulp for project Build
