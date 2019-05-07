@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="myApp" ng-controller="technologiesCtrl">
+<head>
+  <meta charset="utf-8">
+  <title>MySassyApp</title>
+  <link rel="icon" href="/src/fonts/syedportfolio.png"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <script src="js/main.min.js"></script>
+
+    <script src="lib/jquery.min.js"></script>
+    
+    <script src="lib/bootstrap.min.js"></script>
+    
+    <script src="js/files.min.JSON"></script>
+  
+</head> 
+<body  class="container-fluid background">
+    <div ng-include="'src/html/header.html'"></div> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <br/>
+                <br/>
+                <br/>
+                <div class="container">
+                        <div class="row">
+                        <div class="col-xs col-sm col-md col-lg" ng-repeat="x in myFiles | filter: search " style="padding-right: 0px">
+                            <div id="jumbo" class="jumbotron text-center rounded-0" ng-class="(x.featured === 'true') ? 'feature-active center-block' : 'feature-Inactive center-block'">
+                                <h3 >{{x.title}} </h3>
+                                <p>{{x.description}}</p>
+                                <div id="imageDoc"><img class="imagesIcon" ng-src="{{x.imagesIcon}}" /></div>
+                                <img class="images" ng-src="{{x.images}}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'src/html/footer.html'"> </div>
+</body>
+</html>
